@@ -20,6 +20,7 @@ import org.infinispan.query.ResultIterator;
 import org.infinispan.query.backend.KeyTransformationHandler;
 import org.infinispan.query.impl.CacheQueryImpl;
 import org.infinispan.query.impl.QueryDefinition;
+import org.infinispan.query.impl.QueryResultLoader;
 import org.infinispan.remoting.transport.Address;
 
 /**
@@ -108,6 +109,11 @@ public final class ClusteredCacheQueryImpl<E> extends CacheQueryImpl<E> {
          default:
             throw new IllegalArgumentException("Unknown FetchMode " + fetchOptions.getFetchMode());
       }
+   }
+
+   @Override
+   public ResultIterator<E> iterator(FetchOptions fetchOptions, QueryResultLoader loader) throws SearchException {
+      throw new IllegalArgumentException("Unsupported!");
    }
 
    // number of results of each node of cluster

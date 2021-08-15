@@ -8,6 +8,7 @@ import org.apache.lucene.search.Filter;
 import org.apache.lucene.search.Sort;
 import org.hibernate.search.filter.FullTextFilter;
 import org.hibernate.search.query.engine.spi.FacetManager;
+import org.infinispan.query.impl.QueryResultLoader;
 
 /**
  * A cache-query is what will be returned when the getQuery() method is run on {@link org.infinispan.query.impl.SearchManagerImpl}. This object can
@@ -39,6 +40,8 @@ public interface CacheQuery<E> extends Iterable<E> {
     * @return a QueryResultIterator which can be used to iterate through the results that were found.
     */
    ResultIterator<E> iterator(FetchOptions fetchOptions);
+
+   ResultIterator<E> iterator(FetchOptions fetchOptions, QueryResultLoader resultLoader);
 
    /**
     * Returns the results of a search as a {@link ResultIterator}. This calls {@link CacheQuery#iterator(FetchOptions fetchOptions)}
