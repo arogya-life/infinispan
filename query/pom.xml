@@ -247,4 +247,23 @@
          </build>
       </profile>
    </profiles>
+
+   <repositories>
+      <repository>
+         <id>maven-public</id>
+         <url>https://pkg.arima.xyz/repository/maven-public/</url>
+      </repository>
+   </repositories>
+
+   <distributionManagement>
+      <repository>
+         <id>maven-releases</id>
+         <url>https://pkg.arima.xyz/repository/maven-releases/</url>
+      </repository>
+      <snapshotRepository>
+         <id>maven-snapshots</id>
+         <url>https://pkg.arima.xyz/repository/maven-snapshots/</url>
+      </snapshotRepository>
+   </distributionManagement>
+
 </project>

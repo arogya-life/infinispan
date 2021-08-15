@@ -61,18 +61,7 @@
          </notifier>
       </notifiers>
    </ciManagement>
-   <distributionManagement>
-      <repository>
-         <id>${jboss.releases.repo.id}</id>
-         <name>JBoss Release Repository</name>
-         <url>${jboss.releases.repo.url}</url>
-      </repository>
-      <snapshotRepository>
-         <id>${jboss.snapshots.repo.id}</id>
-         <name>JBoss Snapshot Repository</name>
-         <url>${jboss.snapshots.repo.url}</url>
-      </snapshotRepository>
-   </distributionManagement>
+
    <modules>
       <module>bom</module>
    </modules>
@@ -92,14 +81,6 @@
       <infinispan.core.schema.version>${infinispan.base.version}</infinispan.core.schema.version>
       <wildfly.brand.name>WildFly</wildfly.brand.name>
       <wildfly.brand.prefix>wildfly</wildfly.brand.prefix>
-
-      <!-- jboss repository urls -->
-      <jboss.releases.repo.id>jboss-releases-repository</jboss.releases.repo.id>
-      <jboss.releases.nexus.url>https://repository.jboss.org/nexus</jboss.releases.nexus.url>
-      <jboss.releases.repo.url>${jboss.releases.nexus.url}/service/local/staging/deploy/maven2/</jboss.releases.repo.url>
-      <jboss.snapshots.repo.id>jboss-snapshots-repository</jboss.snapshots.repo.id>
-      <jboss.snapshots.repo.url>${jboss.releases.nexus.url}/content/repositories/snapshots/</jboss.snapshots.repo.url>
-
       <!-- === Application Server Configuration === -->
 
       <!-- org.wildfly / org.jboss.eap -->
@@ -113,7 +94,7 @@
       <version.protostream>4.2.5.Final</version.protostream>
 
       <!-- Java source/target version -->
-      <version.java>11</version.java>
+      <version.java>1.8</version.java>
 
       <!-- Dependency versions -->
       <version.ant>1.10.1</version.ant>
@@ -282,22 +263,6 @@
          <activation>
             <property><name>!skipNexusStaging</name></property>
          </activation>
-         <build>
-            <plugins>
-               <plugin>
-                  <groupId>org.sonatype.plugins</groupId>
-                  <artifactId>nexus-staging-maven-plugin</artifactId>
-                  <version>1.6.8</version>
-                  <configuration>
-                     <autoReleaseAfterClose>false</autoReleaseAfterClose>
-                     <nexusUrl>${jboss.releases.nexus.url}</nexusUrl>
-                     <serverId>${jboss.releases.repo.id}</serverId>
-                     <stagingProfileId>2161b7b8da0080</stagingProfileId>
-                     <stagingRepositoryId>${stagingRepositoryId}</stagingRepositoryId>
-                  </configuration>
-               </plugin>
-            </plugins>
-         </build>
       </profile>
 
    </profiles>
