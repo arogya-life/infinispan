@@ -4033,7 +4033,7 @@
                   <dependency>
                      <groupId>org.infinispan</groupId>
                      <artifactId>infinispan-checkstyle</artifactId>
-                     <version>${project.version}</version>
+                     <version>${version.infinispan}</version>
                   </dependency>
                </dependencies>
                <configuration>

@@ -10,7 +10,7 @@
    </parent>
 
    <artifactId>infinispan-checkstyle</artifactId>
-   <version>9.4.23.Final</version>
+   <version>${version.infinispan}</version>
    <name>Infinispan Checkstyle Rules</name>
    <description>Contains the definitions for the Infinispan commons code style and conventions</description>
 
@@ -61,7 +61,7 @@
                <dependency>
                   <groupId>org.infinispan</groupId>
                   <artifactId>infinispan-checkstyle</artifactId>
-                  <version>${project.version}</version>
+                  <version>${version.infinispan}</version>
                </dependency>
             </dependencies>
                <configuration>
