@@ -9,7 +9,7 @@
    </parent>
 
    <artifactId>infinispan-query</artifactId>
-   <version>9.4.23.Final.ARO.01</version>
+   <version>9.4.23.Final</version>
    <packaging>bundle</packaging>
    <name>Infinispan Query</name>
    <description>Infinispan Query module</description>
