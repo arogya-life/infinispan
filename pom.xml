@@ -11,7 +11,7 @@
 
    <groupId>org.infinispan</groupId>
    <artifactId>infinispan-parent</artifactId>
-   <version>9.4.23.Final.ARO.01</version>
+   <version>9.4.23.Final</version>
    <packaging>pom</packaging>
    <name>Infinispan Common Parent</name>
    <description>Infinispan common parent POM module</description>
